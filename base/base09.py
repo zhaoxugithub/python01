@@ -22,7 +22,7 @@ class UserGeneral(User):
 
 
 def printfUserInfo(user):
-    print("sss"+user.printUser())
+    print(user.printUser())
 
 
 if __name__ == '__main__':
