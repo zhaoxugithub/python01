@@ -3,9 +3,11 @@
 
 
 '''
-def f(a,l=[]):
+
+
+def f(a, l=[]):
     l.append(a)
-    return  l
+    return l
 
 
 '''
@@ -24,7 +26,7 @@ def f(a,l=[]):
 '''
 
 
-def f2(a,l = None):
+def f2(a, l=None):
     if l is None:
         l = []
     l.append(a)
