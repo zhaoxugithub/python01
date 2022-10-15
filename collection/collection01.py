@@ -35,3 +35,5 @@ print("-" * 20)
 
 fruits.pop()
 print(f'fruits pop is {fruits}')
+
+

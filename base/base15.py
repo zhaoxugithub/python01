@@ -16,4 +16,3 @@ match color:
         print("I see blue")
     case Color.GREEN:
         print("I'm feeling the blues:(")
-
