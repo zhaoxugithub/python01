@@ -59,5 +59,8 @@ def testDemo03():
 if __name__ == '__main__':
     names = ["java", "python", "php", "go"]
     ages = [20, 30, 40, 50]
-    for name, age in dict(zip(names, ages)):
-        print("name=${name},age={age}")
+    d1 = dict(zip(names, ages))
+    print(d1)
+    #dict遍历
+    for k, v in d1.items():
+        print(k, v)
