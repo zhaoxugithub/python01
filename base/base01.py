@@ -15,8 +15,9 @@ def fibon(n):
     for i in range(n):
         yield a
         a, b = b, a + b
+    return a, b
 
-
+# 1 1
 # # 引用函数
 # for x in fibon(10):
 #     print(x, end=' ')
@@ -160,4 +161,6 @@ def repr_function():
 
 
 if __name__ == '__main__':
-    base_data_type_traction()
+    # base_data_type_traction()
+    a = fibon(10)
+    print(a)

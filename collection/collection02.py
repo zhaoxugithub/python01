@@ -1,19 +1,20 @@
-stack = [3, 4, 5]
+if __name__ == '__main__':
+    stack = [3, 4, 5]
 
-stack.append(6)
-stack.append(7)
+    stack.append(6)
+    stack.append(7)
 
-print(stack)
+    print(stack)
 
-result = stack.pop()
-print(stack)
+    result = stack.pop()
+    print(stack)
 
-result = stack.pop()
-print(result)
+    result = stack.pop()
+    print(result)
 
-result = stack.pop()
-print(result)
+    result = stack.pop()
+    print(result)
 
-print("-" * 20)
+    print("-" * 20)
 
-print(stack)
+    print(stack)
