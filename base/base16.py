@@ -15,8 +15,5 @@ def ask_ok(message, retires=4, reminder="please try again！"):
         print(reminder)
 
 
-
 if __name__ == '__main__':
     ask_ok("y")
-
-

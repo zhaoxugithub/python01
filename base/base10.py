@@ -31,8 +31,8 @@ hasattr(obj, attr)：判断对象是否具有指定属性/方法；
 getattr(obj, attr[, default]) 获取属性/方法的值, 要是没有对应的属性则返回 default 值（前提是设置了 default），否则会抛出 AttributeError 异常；
 setattr(obj, attr, value)：设定该属性/方法的值，类似于 obj.attr=value；
 dir(obj)：可以获取相应对象的所有属性和方法名的列表：
-
 '''
+
 
 class UserInfo(object):
     def __init__(self, name, age, account):
@@ -53,4 +53,3 @@ if __name__ == '__main__':
     print(userInfo.get_account())
     # 用于验证双下划线是否是真正的私有属性
     print(userInfo._UserInfo__account)
-
