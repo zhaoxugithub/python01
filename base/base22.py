@@ -3,6 +3,8 @@ import math
 import cmath
 
 
+# https://blog.csdn.net/weixin_44799217/article/details/112256220
+
 def input_function():
     line = input("please input a word:")
     print(line)
@@ -111,6 +113,29 @@ def json_function2():
     print("data_to_json type={},data type={}".format(type(data_to_json), type(data)))
 
 
+def json_function3():
+    dict1 = {'A': 'a', 'B': 'b', 'C': 'c'}
+    print(type(dict1))
+    print(dict1)
+
+    #  python编码为json类型，json.dumps()
+    en_json = json.dumps(dict1)
+    print(type(en_json))
+    print(en_json)
+
+    #  json解码为python类型， json.loads(),en_json是一个字符串
+    de_json = json.loads(en_json)
+    print(type(de_json))
+    print(de_json)
+
+    #  eval()解析json
+    dict2 = {'X': 'x', 'Y': 'y', 'Z': 'z'}
+    en_json = json.dumps(dict2)  # en_json 是一个字符串
+    de_json = eval(en_json)  # de_json 是一个dict
+    print(type(de_json))
+    print(de_json)
+
+
 if __name__ == '__main__':
     # math_function()
-    json_function2()
+    json_function3()
