@@ -136,6 +136,45 @@ def json_function3():
     print(de_json)
 
 
+def json_function4():
+    '''
+        [
+            dict1={key1:list1,key2:list2}
+            dict2={key1:str1,key2:str2}
+        ]
+    :return:
+    '''
+    list1 = [
+        {'A': [1, 2, 3, 4, 5, 6], 'B': [3, 4, 5, 6, 7]},
+        {'C': '123', 'D': '234'}
+    ]
+
+    # 讲数据写入文件
+    file = open('json_demo.json', 'w')
+    for i in list1:
+        # json_i是一个str
+        json_i = json.dumps(i)
+        file.write(json_i + '\n')
+    file.close()
+
+    # 从文件中读取数据
+    get_data = []
+    with open('json_demo.json', 'r') as f:
+        #  读取数据并分割，最后一个为空，所以去除
+        # [:-1] 表示从开始到倒数第二个
+        new_list = f.read().split('\n')[:-1]
+        print("new_list={}".format(new_list))
+        for x in new_list:
+            # 读取x，x是一个str,json_x 是一个dict
+            json_x = json.loads(x)
+            print(type(json_x))
+            get_data.append(json_x)
+    f.close()
+
+    print(f'原始数据位:{list1}')
+    print(f'结果数据为:{get_data}')
+
+
 if __name__ == '__main__':
     # math_function()
-    json_function3()
+    json_function4()
