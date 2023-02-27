@@ -1,4 +1,6 @@
-if __name__ == '__main__':
+from twisted.python.compat import cmp
+
+def list_function1():
     fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
     print(fruits)
 
@@ -36,3 +38,26 @@ if __name__ == '__main__':
 
     fruits.pop()
     print(f'fruits pop is {fruits}')
+
+    # 在指定位置进行添加
+    fruits.insert(3, "sss")
+    print("fruits={}".format(fruits))
+    # 添加一个列表
+    exrta = [3, 4, 5, 6]
+    fruits.extend(exrta)
+    print("fruits={}".format(fruits))
+
+    res = max(exrta)
+    print(res)
+
+    list1 = [1, 2, 3, 4]
+    list2 = [2, 3, 4, 5, 6]
+    rr = cmp(list2, list1)
+    print(rr)
+
+
+
+
+
+if __name__ == '__main__':
+  pass

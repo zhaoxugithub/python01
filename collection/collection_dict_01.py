@@ -1,3 +1,4 @@
+# https://www.bookstack.cn/read/52fhy-python/f6ab350838a65d6d.md
 def function_01():
     '''
     dict = {key1 : value1, key2 : value2 }
@@ -91,5 +92,63 @@ def function_05():
         print(en[0], en[1])
 
 
+def dict_function06():
+    dic = {'name': 'Zara', 'age': 7, 'class': 'First'}
+
+    # 移除单个元素
+    del dic['name']
+    # 移除所有的元素
+    dic.clear()
+    print(dic)
+    # 删除字典
+    del dic
+
+    # print(dic) 会报错，因为dic不存在
+
+
+def dict_function07():
+    dic1 = {'name': 'Zara', 'age': 7, 'class': 'First'}
+    dic2 = {'name': 'Zara', 'age': 7, 'class': 'First'}
+
+    # res1 = cmp(dic1, dic2)
+    # print("cmp ={}".format(res1))
+
+    print("len ={}".format(len(dic1)))
+
+    print("str={}".format(str(dic2)))
+
+    print("type={}".format(type(dic1)))
+
+    # dic1.clear()
+
+    dict.clear(dic1)
+    print(dic1)
+
+    dict2_copy = dict.copy(dic2)
+    print("dict2_copy={}".format(dict2_copy))
+
+    dict2_keys = dict.fromkeys(dic2)
+    print("dict2_keys={}".format(dict2_keys))
+
+    # 取值,如果存在name这个key,就取出来，不然就取no element
+    name_value = dic2.get("name", "no element")
+    print("name_value={}".format(name_value))
+
+    g_value = dic2.get("g", "no element")
+    print("g_element = {}".format(g_value))
+
+    # 判断是否存在key
+    res = "name" in dic2
+    print("res = {}".format(res))
+
+    # 遍历
+    for k, v in dic2.items():
+        print("key={},value={}".format(k, v))
+
+    values_list = dic2.values()
+    key_list = dic2.keys()
+    print("key_list={},value_list={}".format(key_list, values_list))
+
+
 if __name__ == '__main__':
-    function_02()
+    dict_function07()

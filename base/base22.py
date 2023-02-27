@@ -175,6 +175,40 @@ def json_function4():
     print(f'结果数据为:{get_data}')
 
 
+def json_function5():
+    # 字典
+    dic = {'name': 'dgw', 'sex': 'female', 'age': 30, 'grade': [{"语文": 96}, {'数学': 99}]}
+    print(dic)
+
+    # json 数据是双引号
+    '''
+        ensure_ascii=False 表示[{"语文": 96}, {"数学": 99}]}
+        ensure_ascii=True  表示[{"\u8bed\u6587": 96}, {"\u6570\u5b66": 99}]}
+    '''
+    json_dic = json.dumps(dic, ensure_ascii=False)
+    print("json_dic={},type={}".format(json_dic, type(json_dic)))
+
+    # 对json_dic 数据进行转义
+    json_dic_escape = json.dumps(json_dic, ensure_ascii=False)
+    print("json_dic_escape={},type={}".format(json_dic_escape, type(json_dic_escape)))
+
+    # 对dic数据中的某个字段进行单独转义
+    dic['grade'] = json.dumps(dic['grade'], ensure_ascii=False)
+    json_dic_escape2 = json.dumps(json.dumps(dic, ensure_ascii=False), ensure_ascii=False)
+    print("json_dic_escape2={}".format(json_dic_escape2))
+
+    # 对json_dic_escape2 数据进行转义解码
+    json_dic_escape_decode = json.loads(json_dic_escape2)
+    print("json_dic_escape_decode={}".format(json_dic_escape_decode))
+
+    with open('text.txt', 'a', encoding='utf-8') as f:
+        f.write(str(dic) + '\n')
+        f.write(json_dic + '\n')
+        f.write(json_dic_escape + '\n')
+        f.write(json_dic_escape2 + '\n')
+        f.write(json_dic_escape_decode + '\n')
+
+
 if __name__ == '__main__':
     # math_function()
-    json_function4()
+    json_function5()
