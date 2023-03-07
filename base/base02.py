@@ -61,6 +61,10 @@ if __name__ == '__main__':
     ages = [20, 30, 40, 50]
     d1 = dict(zip(names, ages))
     print(d1)
-    #dict遍历
+    # dict遍历
     for k, v in d1.items():
+        print(k, v)
+
+    d2 = zip(names, ages)
+    for k, v in d2:
         print(k, v)
