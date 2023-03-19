@@ -48,7 +48,7 @@ def fab2(max):
 
 
 def iterFab02():
-    li = [i for i in fab2(5)]
+    li = [i*i for i in fab2(5)]
     for ee in li:
         print(ee)
 
@@ -73,6 +73,7 @@ def testSquare():
 
 # 和testSquare 是等价的
 def testSquare2():
+    #获取迭代器
     sq2 = square().__iter__()
     try:
         while True:
@@ -161,6 +162,6 @@ def repr_function():
 
 
 if __name__ == '__main__':
-    # base_data_type_traction()
-    a = fibon(10)
-    print(a)
+    # for x in fibon(3):
+    #     print(x, end=' ')
+    iterFab02()

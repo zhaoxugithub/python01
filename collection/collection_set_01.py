@@ -1,5 +1,7 @@
 def function_01():
     set1 = set([123, 345, 678])
+    set2 = {3, 4, 5, 5}
+    print(set2)
     # {345, 123, 678}
     '''
         两个顺序是不一样的
@@ -59,4 +61,4 @@ def function_05():
 
 
 if __name__ == '__main__':
-    function_05()
+    function_01()
