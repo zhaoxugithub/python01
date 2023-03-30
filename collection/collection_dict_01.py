@@ -149,6 +149,17 @@ def dict_function07():
     key_list = dic2.keys()
     print("key_list={},value_list={}".format(key_list, values_list))
 
+    dic2.setdefault("ggg", "ggg_value")
+    print("dic2={}".format(dic2))
+
+    dic2.setdefault("name", "zhaoxu")
+    print("dict2={}".format(dic2))
+
+    dic3 = {"height": 177, "weight": 66}
+    # 把dic3追加到dic2中
+    dic2.update(dic3)
+    print("dic_new={}".format(dic2))
+
 
 if __name__ == '__main__':
     dict_function07()
