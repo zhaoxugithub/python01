@@ -2,4 +2,3 @@ class UserInfo(object):
     pass
 
 
-

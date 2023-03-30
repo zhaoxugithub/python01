@@ -20,12 +20,13 @@ class Demo03():
     def __init__(self, start):
         self.start = start
 
+    # 可以被反转
     def __reversed__(self):
         n = self.start
         while n > 0:
             yield n
             n -= 1
-
+    # 可以被迭代
     def __iter__(self):
         n = 1
         while n <= self.start:

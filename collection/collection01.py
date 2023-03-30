@@ -1,5 +1,3 @@
-from twisted.python.compat import cmp
-
 def list_function1():
     fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
     print(fruits)
@@ -50,14 +48,6 @@ def list_function1():
     res = max(exrta)
     print(res)
 
-    list1 = [1, 2, 3, 4]
-    list2 = [2, 3, 4, 5, 6]
-    rr = cmp(list2, list1)
-    print(rr)
-
-
-
-
 
 if __name__ == '__main__':
-  pass
+    pass

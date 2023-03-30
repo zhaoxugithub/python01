@@ -17,6 +17,7 @@ def fibon(n):
         a, b = b, a + b
     return a, b
 
+
 # 1 1
 # # 引用函数
 # for x in fibon(10):
@@ -132,8 +133,8 @@ def base_data_type_traction():
 
     print(repr("22222222"))
 
-    print("tuple={}", tuple([2, 3, 4]))
-    print("list={}", list({2, 3, 4, 5}))
+    print("tuple={}".format(tuple([2, 3, 4])))
+    print("list={}".format(list({2, 3, 4, 5})))
 
     print("char=", chr(x))
     print(ord(chr(x)))
@@ -161,6 +162,6 @@ def repr_function():
 
 
 if __name__ == '__main__':
-    # base_data_type_traction()
-    a = fibon(10)
-    print(a)
+    base_data_type_traction()
+    # a = fibon(10)
+    # print(a)
