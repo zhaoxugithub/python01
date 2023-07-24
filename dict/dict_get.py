@@ -5,7 +5,7 @@ user_info = {
     'username': 'dewei',
     'password': 'abcdefg',
     'created_time': '2020-01-01 11:11:11',
-    'birthday': None
+    'birthday': ""
 }
 
 values = []

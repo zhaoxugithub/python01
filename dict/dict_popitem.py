@@ -3,7 +3,9 @@
 students = {'dewei': '到', 'xiaomu': '在', 'xiaoyun': '在呢', 'xiaogao': '在'}
 
 print('xiaogao 在吗')
+# pop除最后一个元素
 xiaogao = students.popitem()
+print("xiaogao={}".format(xiaogao))
 print('{} 喊 {}'.format(xiaogao[0], xiaogao[1]))
 print('xiaoyun 在吗')
 xiaoyun = students.popitem()
