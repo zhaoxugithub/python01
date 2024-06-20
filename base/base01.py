@@ -17,10 +17,11 @@ def fibon(n):
         a, b = b, a + b
     return a, b
 
+
 # 1 1
 # # 引用函数
-# for x in fibon(10):
-#     print(x, end=' ')
+for x in fibon(10):
+    print(x, end=' ')
 
 
 def fab(max):
@@ -48,9 +49,12 @@ def fab2(max):
 
 
 def iterFab02():
-    li = [i*i for i in fab2(5)]
+    li = [i * i for i in fab2(5)]
     for ee in li:
         print(ee)
+
+
+r = iterFab02()
 
 
 def iterFab01():
@@ -73,7 +77,7 @@ def testSquare():
 
 # 和testSquare 是等价的
 def testSquare2():
-    #获取迭代器
+    # 获取迭代器
     sq2 = square().__iter__()
     try:
         while True:
@@ -98,6 +102,10 @@ def testMath():
     # 取整
     print(11 // 2)
     print(11 % 2)
+
+
+print("-------执行testMatch-------")
+testMath()
 
 
 def base_data_type_traction():
@@ -133,13 +141,17 @@ def base_data_type_traction():
 
     print(repr("22222222"))
 
-    print("tuple={}", tuple([2, 3, 4]))
-    print("list={}", list({2, 3, 4, 5}))
+    print("tuple={}".format(tuple([2, 3, 4])))
+    print("list={}".format(list({2, 3, 4, 5})))
 
     print("char=", chr(x))
     print(ord(chr(x)))
 
     pass
+
+
+print("-------base_data_type_traction---------")
+base_data_type_traction()
 
 
 def repr_function():
@@ -161,7 +173,27 @@ def repr_function():
     print(eval(rp))
 
 
-if __name__ == '__main__':
-    # for x in fibon(3):
-    #     print(x, end=' ')
-    iterFab02()
+print("repr_function:")
+repr_function()
+
+'''
+yield 返回的是一个可以迭代的对象
+    r1 = fibon2()
+    for x in r1:
+        print(x)
+'''
+
+
+def fibon2():
+    a = 0
+    for i in range(10):
+        a = a + 1
+        yield a
+
+# if __name__ == '__main__':
+#     # for x in fibon(3):
+#     #     print(x, end=' ')
+#     #
+#     r1 = fibon2()
+#     for x in r1:
+#         print(x)
