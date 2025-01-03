@@ -21,5 +21,3 @@ def f(arg=i):
     print(arg)
 
 f()
-
-

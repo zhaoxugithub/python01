@@ -54,7 +54,7 @@ def iterFab02():
         print(ee)
 
 
-r = iterFab02()
+iterFab02()
 
 
 def iterFab01():
